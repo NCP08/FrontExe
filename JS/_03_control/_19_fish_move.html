@@ -21,7 +21,8 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const $fish = document.querySelector('#fish');
+            // const $fish = document.querySelector('#fish');
+            const $fish = document.getElementById('fish');
             let x = 50;
             let y = 200;
             const LEFT_KEY = 37;
@@ -51,6 +52,16 @@
                         break;
                 }
 
+                // style의 left값 가져오기
+                /*
+                let _left = $fish.style.left;
+                console.log('fish left=' + _left);
+                _left = _left.replace('px', '');    // px글자 제거
+                console.log('fish left=' + _left);
+                console.log('_left type=' + typeof(_left));
+                _left = Number(_left);
+                console.log('_left type=' + typeof(_left));
+                */
                 // panel영역을 벗어나지 못하도록 제약
                 if (x < 0)
                     x = 0;
